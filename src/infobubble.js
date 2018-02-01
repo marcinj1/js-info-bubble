@@ -1528,7 +1528,7 @@ InfoBubble.prototype.removeTab = function(index) {
 
   this.tabs_.splice(index, 1);
 
-  delete tab;
+  tab = {};
 
   for (var i = 0, t; t = this.tabs_[i]; i++) {
     t.tab.index = i;
@@ -1593,7 +1593,6 @@ InfoBubble.prototype.getElementSize_ = function(element, opt_maxWidth,
   }
 
   document.body.removeChild(sizer);
-  delete sizer;
   return size;
 };
 
